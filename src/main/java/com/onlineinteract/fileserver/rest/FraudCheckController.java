@@ -16,7 +16,7 @@ public class FraudCheckController {
 	@RequestMapping(method = RequestMethod.POST, consumes = "application/json", produces = "text/plain", value = "/fraudCheck")
 	@ResponseBody
 	public ResponseEntity<String> fraudCheck(@RequestBody String customer) {
-		System.out.println("\nFraud checking customer: " + customer);
+		System.out.println("\nFraud checking customer (with extra fraud checks): " + customer);
 		return new ResponseEntity<>("Customer checks out OK", HttpStatus.OK);
 	}
 }
